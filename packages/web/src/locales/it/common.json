@@ -15,9 +15,11 @@
   },
   "loading": "Caricamento...",
   "next": "Avanti",
+  "or": "o",
+  "pause": "Pausa",
+  "play": "Riproduci",
   "save": "Salva",
   "seconds": "sec",
   "skip": "Salta",
-  "submit": "Invia",
-  "or": "o"
+  "submit": "Invia"
 }
