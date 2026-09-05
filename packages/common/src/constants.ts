@@ -40,6 +40,7 @@ export const EVENTS = {
     ABORT_QUIZ: "manager:abortQuiz",
     NEXT_QUESTION: "manager:nextQuestion",
     SHOW_LEADERBOARD: "manager:showLeaderboard",
+    MEDIA_ENDED: "manager:mediaEnded",
     GET_CONFIG: "manager:getConfig",
     LOGOUT: "manager:logout",
     UNAUTHORIZED: "manager:unauthorized",
@@ -83,6 +84,10 @@ export const MEDIA_TYPES = {
 } as const
 
 export type MediaType = (typeof MEDIA_TYPES)[keyof typeof MEDIA_TYPES]
+
+/** A media that plays over time (audio, video), as opposed to a static image. */
+export const isPlayableMedia = (type: MediaType | undefined): boolean =>
+  type === MEDIA_TYPES.AUDIO || type === MEDIA_TYPES.VIDEO
 
 /**
  * Media accepted for upload, keyed by the MIME the server detects from magic
