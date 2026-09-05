@@ -40,6 +40,7 @@ export const EVENTS = {
     ABORT_QUIZ: "manager:abortQuiz",
     NEXT_QUESTION: "manager:nextQuestion",
     SHOW_LEADERBOARD: "manager:showLeaderboard",
+    MEDIA_ENDED: "manager:mediaEnded",
     GET_CONFIG: "manager:getConfig",
     LOGOUT: "manager:logout",
     UNAUTHORIZED: "manager:unauthorized",
@@ -103,6 +104,10 @@ export const ACCEPTED_MEDIA_TYPES: Record<
   "audio/ogg": { ext: ".ogg", type: MEDIA_TYPES.AUDIO },
   "audio/wav": { ext: ".wav", type: MEDIA_TYPES.AUDIO },
 }
+
+/** A media that plays over time (audio, video), as opposed to a static image. */
+export const isPlayableMedia = (type: MediaType | undefined): boolean =>
+  type === MEDIA_TYPES.AUDIO || type === MEDIA_TYPES.VIDEO
 
 export const EXAMPLE_QUIZZ = {
   subject: "Example Quizz",

@@ -15,9 +15,11 @@
   },
   "loading": "Chargement...",
   "next": "Suivant",
+  "or": "ou",
+  "pause": "Pause",
+  "play": "Lecture",
   "save": "Enregistrer",
   "seconds": "sec",
   "skip": "Passer",
-  "submit": "Valider",
-  "or": "ou"
+  "submit": "Valider"
 }
